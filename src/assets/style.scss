@@ -7,5 +7,21 @@
 }
 
 body {
-  @apply bg-gray-800 text-gray-100 flex flex-col min-h-screen
+  @apply bg-gray-800 text-green-500 flex flex-col min-h-screen font-mono;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 100% 2em;
+}
+
+@layer components {
+  .cursor {
+    @apply inline-block w-1 bg-green-500;
+    height: 0.75em;
+    animation: blink 1s steps(1, start) infinite;
+  }
+}
+
+@keyframes blink {
+  50% {
+    background-color: transparent;
+  }
 }

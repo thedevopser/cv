@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col text-green-400 w-6/12">
-    <h2 class="text-3xl font-bold mb-10">Contactez-moi</h2>
+    <h2 class="text-3xl font-bold mb-10">Contactez-moi <span class="cursor"></span></h2>
     <form ref="form" @submit.prevent="submitForm">
       <div class="mb-5">
         <label class="block mb-2" for="name">Nom et prénom</label>
