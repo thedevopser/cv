@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col text-green-400 mx-auto w-11/12 space-y-8">
+  <div class="flex flex-col text-green-400 mx-auto w-9/12 space-y-8">
     <h2 class="text-3xl font-bold mb-10">À propos de moi</h2>
     <p class="text-xl" v-for="(paragraph, index) in animatedParagraphs" :key="index">
       {{ paragraph }}
