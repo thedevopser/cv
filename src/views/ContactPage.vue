@@ -25,8 +25,10 @@
       </div>
 
       <div class="mb-5">
-        <!-- Vous pouvez utiliser Google reCAPTCHA ou un autre service pour la vérification anti-bot -->
-        <!-- Votre composant de vérification anti-bot irait ici -->
+        <vue-recaptcha-v3
+            action='contact_form'
+            @verify="onVerify"
+        />
       </div>
 
       <button
@@ -67,7 +69,13 @@ export default {
           })
     }
 
-    return { name, email, message, form, submitForm }
+    const onVerify = (response) => {
+      if (response) {
+        submitForm();
+      }
+    }
+
+    return { name, email, message, form, submitForm, onVerify }
   }
 }
 </script>
