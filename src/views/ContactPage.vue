@@ -38,46 +38,36 @@
 </template>
 
 <script>
-import emailjs from '@emailjs/browser';
-import { useToast } from "vue-toastification";
+import { ref } from 'vue'
+import emailjs from '@emailjs/browser'
+import { useToast } from 'vue-toastification'
 
 export default {
-  data() {
-    return {
-      name: '',
-      email: '',
-      message: '',
-      userId: process.env.VUE_APP_EMAILJS_USER_ID,
-      serviceId: process.env.VUE_APP_EMAILSJS_SERVICE_ID,
-      templateId: process.env.VUE_APP_EMAILJS_SERVICE_TEMPLATEID,
-      toast: useToast()
+  setup() {
+    const name = ref('')
+    const email = ref('')
+    const message = ref('')
+    const form = ref(null)
+    const toast = useToast()
+
+    const userId = process.env.VUE_APP_EMAILJS_USER_ID
+    const serviceId = process.env.VUE_APP_EMAILSJS_SERVICE_ID
+    const templateId = process.env.VUE_APP_EMAILJS_SERVICE_TEMPLATEID
+
+    const submitForm = () => {
+      emailjs.sendForm(serviceId, templateId, form.value, userId)
+          .then(() => {
+            toast.success('Votre message a bien été envoyé.')
+            // Reset form field
+            name.value = ''
+            email.value = ''
+            message.value = ''
+          }, (error) => {
+            toast.error(error)
+          })
     }
-  },
-  computed: {
 
-  },
-  methods: {
-
-   async submitForm() {
-      console.log(this.$refs.form)
-      emailjs.sendForm(
-          this.serviceId,
-          this.templateId,
-          this.$refs.form,
-          this.userId,
-      )
-          .then((success) => {
-                console.log(success)
-                this.toast.success('Votre message a bien été envoyé.')
-              },
-              (error) => {
-                this.toast.error(error)
-              })
-      // Reset form field
-      this.name = ''
-      this.email = ''
-      this.message = ''
-    },
+    return { name, email, message, form, submitForm }
   }
 }
 </script>

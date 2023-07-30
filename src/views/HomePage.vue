@@ -28,10 +28,13 @@
 </template>
 
 <script>
+import { ref } from 'vue'
+import profileImage from '@/assets/images/profile_ai_v2.jpg'
+
 export default {
-  data() {
+  setup() {
     return {
-      profileImage: require('@/assets/images/profile_ai_v2.jpg')
+      profileImage: ref(profileImage)
     }
   }
 }
