@@ -23,4 +23,4 @@ pnpm-debug.log*
 *.sw?
 
 # Jest snapshot
-tests/unit/__snapshots__/*.snap
+tests/unit/__snapshots__/*
