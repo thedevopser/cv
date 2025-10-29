@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+:root {
+  color-scheme: light dark;
+}
+
+html, body, #app { height: 100%; }
+
+/* Page setup for printing */
+@page {
+  size: A4;
+  margin: 10mm;
+}
+
+/* Print styles to improve PDF export */
+@media print {
+  html, body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    background: white !important;
+  }
+  /* Avoid page breaks inside common blocks */
+  section, aside, .card, .timeline-item, .avoid-break {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  /* Force a page break helper */
+  .page-break { page-break-after: always; break-after: page; }
+  /* Hide interactive-only controls */
+  .no-print { display: none !important; }
+}
+
+/* Optional visual cue when entering the print preview route, before the dialog opens */
+.print-preview body {
+  background: white;
+}
