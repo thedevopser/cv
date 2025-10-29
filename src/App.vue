@@ -2,7 +2,6 @@
   <div class="min-h-full">
     <header class="no-print sticky top-0 z-10 backdrop-blur bg-white/70 dark:bg-gray-900/70 border-b border-gray-200 dark:border-gray-800">
       <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-        <h1 class="text-lg font-semibold tracking-tight">CV — Sylvain ANGLADE</h1>
         <div class="flex items-center gap-2">
           <RouterLink
             class="px-3 py-1.5 rounded-md text-sm border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"

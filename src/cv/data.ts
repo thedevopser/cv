@@ -14,8 +14,8 @@ export type Profile = {
 export type Experience = {
   company: string;
   role: string;
-  start: string; // e.g., '01/2022'
-  end: string; // 'Présent' or '06/2024'
+  start: string;
+  end: string;
   location?: string;
   achievements: string[];
   tech?: string[];
@@ -56,7 +56,7 @@ const cv: CV = {
     phone: '06.12.19.19.46',
     linkedin: 'https://www.linkedin.com/in/sylvain-anglade-4ab1191b4',
     github: 'https://github.com/thedevopser',
-    website: undefined,
+    website: 'https://thedevopser.github.io/cv',
     summary:
       "Autodidacte passionné par les technologies et la transmission du savoir, j’ai évolué du support technique au rôle d’expert développement à la CPAM de la Gironde. Fort de plus de 10 ans d’expérience dans la conception d’applications, le soutien technique auprès de l’équipe et la mise en place de socles techniques, je souhaite aujourd’hui poursuivre mon évolution en tant que Responsable d’Équipe Développement.",
   },
