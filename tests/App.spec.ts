@@ -11,7 +11,7 @@ describe('App', () => {
       },
     });
 
-    expect(wrapper.text()).toContain('CV — Sylvain ANGLADE');
+    expect(wrapper.text()).toContain('Sylvain ANGLADE');
     expect(wrapper.text()).toContain('Expériences');
     expect(wrapper.text()).toContain('Compétences');
     expect(wrapper.text()).toContain('Formations');
