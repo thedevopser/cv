@@ -50,12 +50,12 @@ export type CV = {
 const cv: CV = {
   profile: {
     name: 'Sylvain ANGLADE',
-    title: 'Responsable Équipe Développement – Expert Technique Développement',
+    title: 'Expert Technique Développement',
     location: '36 Rue de l’Ancienne Écluse – 33450 Saint-Sulpice-et-Cameyrac',
     email: 'sylvain.anglade@gmail.com',
     phone: '06.12.19.19.46',
-    linkedin: 'https://www.linkedin.com/in/sylvain-anglade',
-    github: undefined,
+    linkedin: 'https://www.linkedin.com/in/sylvain-anglade-4ab1191b4',
+    github: 'https://github.com/thedevopser',
     website: undefined,
     summary:
       "Autodidacte passionné par les technologies et la transmission du savoir, j’ai évolué du support technique au rôle d’expert développement à la CPAM de la Gironde. Fort de plus de 10 ans d’expérience dans la conception d’applications, le soutien technique auprès de l’équipe et la mise en place de socles techniques, je souhaite aujourd’hui poursuivre mon évolution en tant que Responsable d’Équipe Développement.",
